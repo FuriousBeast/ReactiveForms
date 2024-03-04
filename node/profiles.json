@@ -53,5 +53,16 @@
     "city": "Tirunelveli",
     "state": "Tamilnadu",
     "country": "India"
+  },
+  {
+    "name": "Balamathi",
+    "age": "5",
+    "email": "bala@mail.com",
+    "phone": "4335",
+    "skills": "-",
+    "address": "street",
+    "city": "Tiunelveli",
+    "state": "tamilnadu",
+    "country": "India"
   }
 ]
