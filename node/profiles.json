@@ -1,46 +1,57 @@
 [
   {
-    "name": "Nandhakumar",
-    "email": "nandhu@mail.com",
-    "age": "24",
-    "phone": "+916334714355",
-    "address": "Dubai kuruku sandhu ,dubai main road, Dubai",
-    "skills": "Java, Spring boot",
-    "city": "Chennai",
-    "state": "Tamilnadu",
-    "country": "India"
-  },
-  {
     "name": "Ramya",
+    "age": "24",
     "email": "ramya@mail.com",
-    "age": "23",
-    "phone": "+916334714456",
-    "address": "Dubai kuruku sandhu ,dubai main road, Dubai",
-    "skills": "Java, Spring ",
+    "phone": "735354235",
+    "skills": "Java",
+    "address": "Mettu Street",
     "city": "Chennai",
     "state": "Tamilnadu",
     "country": "India"
   },
   {
     "name": "Radha",
-    "email": "radha@mail.com",
     "age": "50",
-    "phone": "31141",
-    "skills": "jsvb",
-    "address": "vdjbvd",
-    "city": "jvb;j",
-    "state": "djdj",
-    "country": "jsvb;"
+    "email": "radha@mail.com",
+    "phone": "735354235",
+    "skills": "Cooking",
+    "address": "Kovil Street",
+    "city": "Tirunelveli",
+    "state": "Tamilnadu",
+    "country": "India"
   },
   {
-    "name": "fjhv",
-    "email": "gh@jshdj",
-    "age": "45",
-    "phone": "28475862",
-    "skills": "jgfppj",
-    "address": "ddv",
-    "city": "adhb",
-    "state": "dsvhl",
-    "country": "fdh"
+    "name": "Natarajan",
+    "age": "54",
+    "email": "natarajan@mail.com",
+    "phone": "25365454",
+    "skills": "Driving",
+    "address": "Kovil Street",
+    "city": "Tirunelveli",
+    "state": "Tamilnadu",
+    "country": "India"
+  },
+  {
+    "name": "Nandhakumar",
+    "age": "24",
+    "email": "nandhu@mail.com",
+    "phone": "4654674",
+    "skills": "Spring Boot",
+    "address": "Nehru Street",
+    "city": "Chennai",
+    "state": "Tamilnadu",
+    "country": "India"
+  },
+  {
+    "name": "Ajay",
+    "age": "8",
+    "email": "ajay@mail.com",
+    "phone": "24656",
+    "skills": "Playing toys",
+    "address": "street",
+    "city": "Tirunelveli",
+    "state": "Tamilnadu",
+    "country": "India"
   }
 ]
