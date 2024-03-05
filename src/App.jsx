@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import InfiniteScroll from "react-infinite-scroll-component";
 import ProfileCard from "./ProfileCard";
 import './App.css'
-const AppDuplicate = () =>
+const App = () =>
 {
     const [profileList, setProfileList] = useState([]);
     const [profile, setProfile] = new useState({});
@@ -173,4 +173,4 @@ const AppDuplicate = () =>
     )
 }
 
-export default AppDuplicate;
+export default App;
