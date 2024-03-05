@@ -117,7 +117,8 @@ input
   column-gap: 7%;
 
 }
-.infinite-scroll-parent{
+
+#infinite-scroll-parent{
   padding: 57px 28px 0 28px;
   max-height: 38rem;
   overflow: auto;
