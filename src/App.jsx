@@ -17,7 +17,6 @@ const App = () =>
 
     useEffect(() => {
         fetchProfiles();
-        console.log("profileList", profileList)
     }, []);
 
 
@@ -36,13 +35,13 @@ const App = () =>
 
         return uniqueArray;
     }
-    const fetchProfiles =async () =>
+
+    const fetchProfiles = () =>
     {
-      await axios.get(serverUrl + `/profiles?page=${page}`)
+       axios.get(serverUrl + `/profiles?page=${page}`)
             .then((res) =>
             {
                 let data = res.data;
-                console.log("data.length", data)
                 setProfileList(prev =>{
                     let newList = [...removeDuplicates(prev), ...data];
                     return removeDuplicates(newList)
@@ -50,7 +49,7 @@ const App = () =>
                 console.log("before page", page)
                 setPage(prevPage =>  {
                     console.log("prevPage", prevPage)
-                    return prevPage + 0.5
+                    return prevPage + 0.9;
                 } )
                 console.log("after page", page)
                 setHasMore(data.length > 0);
@@ -61,10 +60,11 @@ const App = () =>
             return [];
             });
     }
+
     const fetchMoreProfiles = () =>
     {
-        // if(!hasMore)
-        //     return;
+        if(!hasMore)
+            return;
         fetchProfiles();
     }
 
@@ -136,24 +136,23 @@ const App = () =>
 
     return (
         <>
-            <div className='parentDiv'>
+        <div className='parentDiv'>
             <h1 style={{textAlign : "center"  , color : "white"}}>Profile Form</h1>
-                <div className="container" style={{height : "100%" , width : "100%"}}>
-            <div className='midPanel'>
-                <div className=' formDiv'>
+            <div className="container" style={{height : "100%" , width : "100%"}}>
+                <div className='midPanel'>
+                    <div className=' formDiv'>
                     {renderComponent(props, setProfile)}
                     <button className={"btn-primary btn"} onClick={handleSubmit}>Submit</button>
-                </div>
-                <div className=' listOfCards'>
+                    </div>
+                    <div className=' listOfCards'>
                      {renderComponent([{label: "Filter by name or email", type: 'text', name: 'searchItem'}], setSearchTerm)}
-                    <div className="infinite-scroll-parent" id='infinite-scroll-parent' >
-                    <InfiniteScroll
+                        <div id='infinite-scroll-parent' >
+                        <InfiniteScroll
                         dataLength={profileList.length}
                         next={fetchMoreProfiles}
                         hasMore={hasMore}
                         // loader={<h4>Loading...</h4>}
-                        scrollableTarget="infinite-scroll-parent"
-                    >
+                        scrollableTarget="infinite-scroll-parent">
                         {filteredProfiles.length !== 0 ?
                             filteredProfiles.map((profile, index) =>
                                 (
@@ -161,14 +160,14 @@ const App = () =>
                                         <ProfileCard key={index} profile={profile}/>
                                     </div>
                                 )
-                            ): <p style={{color: 'white'}}>No matching profiles found</p>
+                            ): <h4 style={{color: 'white'}}>No matching profiles found</h4>
                         }
-                    </InfiniteScroll>
+                        </InfiniteScroll>
+                        </div>
                     </div>
                 </div>
             </div>
-                </div>
-            </div>
+        </div>
         </>
     )
 }
